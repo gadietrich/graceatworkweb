@@ -1,0 +1,8 @@
+// Add Divi library items via shortcode
+
+function showlibraryitem_shortcode($moduleid) {
+extract(shortcode_atts(array('id' =>'*'),$moduleid)); 
+return do_shortcode('[et_pb_section global_module="'.$id.'"][/et_pb_section]');
+}
+
+add_shortcode('showlibraryitem', 'showlibraryitem_shortcode');
